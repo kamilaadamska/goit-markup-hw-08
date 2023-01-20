@@ -1,5 +1,5 @@
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -16,54 +16,36 @@
   }
 }
 .header {
-  @include paddings(25px, 24px);
-  @extend %flexbox;
-  justify-content: space-between;
-  &__contact-list {
-    @extend %flexbox;
-    @include fontFormats(1.14, 14px, 0.02em);
-    list-style-type: none;
-    font-weight: 500;
-    gap: 50px;
-  }
-  &__contact-details {
-    @extend %flexbox;
-    color: $secondaryFontColor;
-    &--icon-margin {
-      margin-right: 10px;
-    }
-  }
+  @include paddings(16px, 16px);
   &__border {
     border-bottom: 1px solid #ececec;
   }
-}
-.main-nav {
-  @extend %flexbox;
-  gap: 93px;
-  &__list {
-    @extend .header__contact-list;
-    gap: 46px;
+  &__contact-list {
+    display: none;
   }
 }
-.main-nav__list--link-is-active {
-  color: $colorAccent;
-  position: relative;
-  &::after {
-    @include size(100%, 4px);
-    content: '';
-    display: block;
-    background-color: $colorAccent;
-    border-radius: 2px;
-    position: absolute;
-    top: 45px;
+
+.main-nav {
+  &__mobile {
+    @extend %flexbox;
+    justify-content: space-between;
+  }
+  &__list {
+    display: none;
   }
 }
 .logo {
-  @include fontFormats(1.19, 26px);
+  @include fontFormats(1.17, 24px);
   font-family: 'Raleway';
   font-weight: 700;
   color: $logoColor;
   &--color-accent {
     color: $colorAccent;
   }
+}
+.menu-toggle {
+  @extend %flexbox;
+  background: none;
+  border: none;
+  fill: $primaryFontColor;
 }
