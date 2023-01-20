@@ -1,0 +1,33 @@
+.section {
+  @include paddings(60px, 60px);
+  &--team-bg {
+    background-color: $lightColorAccent;
+  }
+}
+.about-us-list {
+  @extend %flexbox;
+  @include fontFormats;
+  list-style-type: none;
+  color: $secondaryFontColor;
+  gap: 30px;
+  &__title {
+    @include fontFormats(1.14);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primaryFontColor;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__icon {
+    @extend %flexbox;
+    @include size(450px, 120px);
+    background-color: $lightColorAccent;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+}
+.header-secondary--hidden,
+.about-us-gallery {
+  display: none;
+}
