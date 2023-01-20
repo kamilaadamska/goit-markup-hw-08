@@ -1,0 +1,15 @@
+.backdrop {
+  @include positions(0, 0, fixed);
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: visibility $transitionForm, opacity $transitionForm, transform $transitionForm;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
