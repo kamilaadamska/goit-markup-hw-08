@@ -1,0 +1,83 @@
+.footer-bg-color {
+  background: $footerColor;
+}
+.footer {
+  @extend %flexbox;
+  @include paddings(60px, 60px);
+  gap: 70px;
+  &__logo {
+    color: $baseColor;
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__element-header {
+    @include fontFormats(1.14);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $baseColor;
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__input {
+    @include size(358px, 50px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: none;
+    padding: 15px 16px;
+    color: $baseColor;
+    &::placeholder {
+      @include fontFormats(1.25, 16px);
+      color: rgba(255, 255, 255, 0.6);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $colorAccent;
+      outline: 0;
+      background: none;
+    }
+  }
+  &__button {
+    @extend %flexbox;
+    gap: 24px;
+    fill: $baseColor;
+    padding: 10px 28px 10px 42px;
+    transition: fill $transitionForm;
+  }
+  &__form-container {
+    @extend %flexbox;
+    gap: 12px;
+    margin-bottom: 34px;
+  }
+}
+.address-list {
+  list-style-type: none;
+  &__link {
+    @extend .link--selected;
+    @include fontFormats;
+    font-style: normal;
+    color: $baseColor;
+    display: block;
+    margin-bottom: 9px;
+    &:hover,
+    &:focus {
+      color: $colorAccent;
+    }
+    &--color {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+.social-media {
+  &__footer {
+    margin-right: 8px;
+    color: $baseColor;
+    padding-bottom: 40px;
+  }
+  &__icon {
+    &--footer-color {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

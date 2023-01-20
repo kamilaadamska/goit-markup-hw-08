@@ -1,0 +1,29 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/extends';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $primaryFontColor;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+@import 'components/header';
+@import 'components/hero-section';
+@import 'components/modal-window';
+@import 'components/about-us-section';
+@import 'components/team-section';
+@import 'components/clients-section';
+@import 'components/footer';
+@import 'components/filter-buttons';
+@import 'components/projects-gallery';

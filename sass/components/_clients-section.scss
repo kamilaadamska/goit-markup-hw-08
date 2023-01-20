@@ -1,0 +1,16 @@
+.clients-list {
+  @extend .about-us-gallery;
+  &__item {
+    @include size(170px, 92px);
+    border: 1px solid $iconColor;
+    border-radius: 4px;
+    color: $iconColor;
+    transition: border $transitionForm, color $transitionForm;
+    &:hover,
+    &:focus {
+      border: 1px solid $colorAccent;
+      cursor: pointer;
+      color: $colorAccent;
+    }
+  }
+}

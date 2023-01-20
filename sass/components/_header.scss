@@ -1,0 +1,69 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.link {
+  text-decoration: none;
+  color: $primaryFontColor;
+  &--selected {
+    transition: color $transitionForm;
+    &:hover,
+    &:focus {
+      color: $colorAccent;
+    }
+  }
+}
+.header {
+  @include paddings(25px, 24px);
+  @extend %flexbox;
+  justify-content: space-between;
+  &__contact-list {
+    @extend %flexbox;
+    @include fontFormats(1.14, 14px, 0.02em);
+    list-style-type: none;
+    font-weight: 500;
+    gap: 50px;
+  }
+  &__contact-details {
+    @extend %flexbox;
+    color: $secondaryFontColor;
+    &--icon-margin {
+      margin-right: 10px;
+    }
+  }
+  &__border {
+    border-bottom: 1px solid #ececec;
+  }
+}
+.main-nav {
+  @extend %flexbox;
+  gap: 93px;
+  &__list {
+    @extend .header__contact-list;
+    gap: 46px;
+  }
+}
+.main-nav__list--link-is-active {
+  color: $colorAccent;
+  position: relative;
+  &::after {
+    @include size(100%, 4px);
+    content: '';
+    display: block;
+    background-color: $colorAccent;
+    border-radius: 2px;
+    position: absolute;
+    top: 45px;
+  }
+}
+.logo {
+  @include fontFormats(1.19, 26px);
+  font-family: 'Raleway';
+  font-weight: 700;
+  color: $logoColor;
+  &--color-accent {
+    color: $colorAccent;
+  }
+}
