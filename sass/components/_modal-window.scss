@@ -33,6 +33,11 @@
     top: 8px;
     right: 8px;
     cursor: pointer;
+    transition: fill $transitionForm;
+    &:hover,
+    &:focus {
+      fill: $colorAccent;
+    }
   }
   &__form-box {
     display: flex;
