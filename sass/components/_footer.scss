@@ -49,6 +49,10 @@
   .footer {
     padding-right: 89px;
     padding-left: 76px;
+    &__logo {
+      text-align: center;
+      margin-right: 0;
+    }
     &__container {
       margin-right: 84px;
     }
@@ -62,6 +66,7 @@
     flex-wrap: nowrap;
     &__logo {
       flex-wrap: nowrap;
+      justify-content: flex-start;
     }
     &__element-header {
       justify-content: flex-start;
