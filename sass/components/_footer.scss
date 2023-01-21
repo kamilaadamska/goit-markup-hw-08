@@ -52,8 +52,40 @@
     &__container {
       margin-right: 84px;
     }
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+    gap: 70px;
+    flex-wrap: nowrap;
     &__logo {
-      margin-right: 0;
+      flex-wrap: nowrap;
+    }
+    &__element-header {
+      justify-content: flex-start;
+    }
+    &__form-container {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-bottom: 34px;
+    }
+    &__input {
+      @include size(358px, 50px);
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: $colorAccent;
+        outline: 0;
+        background: none;
+      }
+    }
+    &__container {
+      margin-right: 0px;
+    }
+    &__button {
+      flex-wrap: nowrap;
     }
   }
 }
@@ -72,6 +104,12 @@
     }
   }
 }
+@media (min-width: 1200px) {
+  .address-list {
+    align-items: flex-start;
+    gap: 9px;
+  }
+}
 .social-media {
   &__footer {
     color: $baseColor;
@@ -86,6 +124,13 @@
   .social-media {
     &__footer {
       margin-bottom: 42px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .social-media {
+    &__footer {
+      flex-wrap: nowrap;
     }
   }
 }
