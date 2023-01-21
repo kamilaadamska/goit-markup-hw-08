@@ -22,3 +22,11 @@
     }
   }
 }
+@media (min-width: 1200px) {
+  .clients-list {
+    &__item {
+      max-width: 170px;
+      flex-wrap: nowrap;
+    }
+  }
+}
