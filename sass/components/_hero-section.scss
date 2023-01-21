@@ -1,4 +1,3 @@
-/* PHOTO DO POPRAWY */
 .background-photo {
   height: auto;
   margin: 0 auto;
@@ -22,6 +21,12 @@
   color: $baseColor;
   max-width: 365px;
 }
+@media (min-width: 1200px) {
+  .header-primary {
+    @include fontFormats(1.36, 44px, 0.06em);
+    max-width: 696px;
+  }
+}
 .button {
   @include fontFormats(1.88, 16px, 0.06em);
   text-align: center;
@@ -36,6 +41,7 @@
     background-color: $lightColorAccent;
     color: $colorAccent;
     fill: $colorAccent;
+    cursor: pointer;
   }
 }
 .hero {
@@ -45,5 +51,10 @@
   gap: 30px;
   .button {
     padding: 10px 41px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    @include paddings(200px, 200px);
   }
 }
