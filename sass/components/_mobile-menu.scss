@@ -1,0 +1,23 @@
+.menu-container {
+  @include positions(0, 0, fixed);
+  @include size(100vw, 100vh);
+  background-color: $baseColor;
+  padding: 48px 40px;
+  transform: translateX(100%);
+  transition: transform $transitionForm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
+.mobile-menu {
+  list-style-type: none;
+}
+.is-open {
+  transform: translateX(0);
+}
+.js-close-menu {
+  margin-top: -27px;
+  margin-right: -14.67px;
+  padding: 0;
+}
