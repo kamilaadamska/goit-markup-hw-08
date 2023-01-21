@@ -27,6 +27,19 @@
     margin-bottom: 30px;
   }
 }
+@media (min-width: 768px) {
+  .about-us-list {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 354px;
+    }
+    &__title {
+      text-align: left;
+    }
+  }
+}
 .header-secondary--hidden,
 .about-us-gallery {
   display: none;
