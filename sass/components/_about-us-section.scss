@@ -21,7 +21,7 @@
   }
   &__icon {
     @extend %flexbox;
-    @include size(450px, 120px);
+    @include size(100%, 120px);
     background-color: $lightColorAccent;
     border-radius: 4px;
     margin-bottom: 30px;
