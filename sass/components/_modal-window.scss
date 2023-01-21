@@ -13,3 +13,133 @@
   pointer-events: none;
   transform: scale(0);
 }
+.modal-window {
+  @include positions(50%, 50%);
+  width: calc(100vw - 30px);
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: $baseColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  &__exit-button {
+    @include size(30px, 30px);
+    @extend %flexbox;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+  }
+  &__form-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    &--position {
+      position: relative;
+    }
+  }
+  &__form-header {
+    @include fontFormats(1.5, 20px);
+    text-align: center;
+    font-weight: 700;
+    color: $primaryFontColor;
+    margin-bottom: 12px;
+  }
+  &__label {
+    @include fontFormats(1.17, 12px, 0.01em);
+    color: $secondaryFontColor;
+    margin-bottom: 4px;
+    &:hover,
+    &:focus {
+      color: $colorAccent;
+    }
+  }
+  &__icon {
+    transition: fill $transitionForm;
+  }
+  &__user-icon {
+    @include positions(13.26px, 14.27px);
+  }
+  &__phone-icon {
+    @include positions(14px, 15px);
+  }
+  &__mail-icon {
+    @include positions(14px, 13.5px);
+  }
+  &__input {
+    @include size(100%, 40px);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding-left: 42px;
+    transition: border-color $transitionForm;
+    &:focus {
+      outline: 0;
+      border-color: $colorAccent;
+    }
+  }
+  &__textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+    margin-bottom: 20px;
+    transition: border-color $transitionForm;
+    &:focus {
+      outline: 0;
+      border-color: $colorAccent;
+    }
+    &::placeholder {
+      @include fontFormats(1.14, 14px, 0.01em);
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+  &__checkbox-label {
+    @include fontFormats(1.17, 12px);
+    color: $secondaryFontColor;
+    display: flex;
+    max-width: calc(100% - 40px);
+  }
+  &__checkbox-description {
+    display: inline-block;
+    margin-top: 5px;
+  }
+  &__checkbox-container {
+    @extend %flexbox;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  &__not-accepted-terms {
+    position: absolute;
+    transform: translate(-125%, 25%);
+  }
+  &__checkbox-input {
+    opacity: 0;
+  }
+  &__accepted-terms {
+    fill: $baseColor;
+    background-color: $colorAccent;
+    border-radius: 2px;
+    position: absolute;
+    transform: translate(-125%, 25%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity $transitionForm;
+  }
+}
+.modal-window__checkbox-input:checked + .modal-window__accepted-terms {
+  opacity: 1;
+}
+.modal-window__input:focus + .modal-window__mail-icon,
+.modal-window__input:focus + .modal-window__phone-icon,
+.modal-window__input:focus + .modal-window__user-icon {
+  fill: $colorAccent;
+}
+.checkbox-description__link-color {
+  color: $colorAccent;
+}
