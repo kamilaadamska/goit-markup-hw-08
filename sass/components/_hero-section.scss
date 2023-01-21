@@ -20,6 +20,7 @@
   text-transform: uppercase;
   text-align: center;
   color: $baseColor;
+  max-width: 365px;
 }
 .button {
   @include fontFormats(1.88, 16px, 0.06em);
