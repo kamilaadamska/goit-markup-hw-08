@@ -32,8 +32,29 @@
 @media (min-width: 768px) {
   .header {
     @include paddings(21px, 21px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &__contact-list {
       display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style-type: none;
+      font-weight: 500;
+      @include fontFormats(1.17, 12px, 0.02em);
+    }
+    &__contact-details {
+      color: $secondaryFontColor;
+      display: flex;
+      align-items: center;
+    }
+    &__mail-icon {
+      margin-right: 8px;
+      @include size(14px, 10px);
+    }
+    &__phone-icon {
+      margin-right: 8px;
+      @include size(10px, 14px);
     }
   }
 }
@@ -48,8 +69,14 @@
 }
 @media (min-width: 768px) {
   .main-nav {
+    display: flex;
+    align-items: center;
     &__list {
       display: flex;
+      @include fontFormats(1.14, 14px, 0.02em);
+      list-style-type: none;
+      font-weight: 500;
+      gap: 60px;
     }
   }
 }
@@ -77,5 +104,10 @@
   color: $logoColor;
   &--color-accent {
     color: $colorAccent;
+  }
+}
+@media (min-width: 768px) {
+  .logo {
+    margin-right: 83px;
   }
 }
