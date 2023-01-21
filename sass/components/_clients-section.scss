@@ -1,0 +1,18 @@
+.clients-list {
+  @extend .team-list;
+  &__item {
+    @extend %flexbox;
+    height: 92px;
+    flex-basis: calc((100% - 60px) / 2);
+    border: 1px solid $iconColor;
+    border-radius: 4px;
+    color: $iconColor;
+    transition: border $transitionForm, color $transitionForm;
+    &:hover,
+    &:focus {
+      border: 1px solid $colorAccent;
+      cursor: pointer;
+      color: $colorAccent;
+    }
+  }
+}
