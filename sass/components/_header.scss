@@ -48,4 +48,9 @@
   background: none;
   border: none;
   fill: $primaryFontColor;
+  transition: fill $transitionForm;
+  &:hover,
+  &:focus {
+    fill: $colorAccent;
+  }
 }
