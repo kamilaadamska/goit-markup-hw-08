@@ -77,6 +77,19 @@
       list-style-type: none;
       font-weight: 500;
       gap: 60px;
+      &--link-is-active {
+        color: $colorAccent;
+        position: relative;
+        &::after {
+          @include size(100%, 4px);
+          content: '';
+          display: block;
+          background-color: $colorAccent;
+          border-radius: 2px;
+          position: absolute;
+          top: 45.5px;
+        }
+      }
     }
   }
 }
