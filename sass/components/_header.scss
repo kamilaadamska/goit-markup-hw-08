@@ -4,6 +4,11 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
 .link {
   text-decoration: none;
   color: $primaryFontColor;
@@ -24,7 +29,14 @@
     display: none;
   }
 }
-
+@media (min-width: 768px) {
+  .header {
+    @include paddings(21px, 21px);
+    &__contact-list {
+      display: flex;
+    }
+  }
+}
 .main-nav {
   &__mobile {
     @extend %flexbox;
@@ -34,13 +46,11 @@
     display: none;
   }
 }
-.logo {
-  @include fontFormats(1.17, 24px);
-  font-family: 'Raleway';
-  font-weight: 700;
-  color: $logoColor;
-  &--color-accent {
-    color: $colorAccent;
+@media (min-width: 768px) {
+  .main-nav {
+    &__list {
+      display: flex;
+    }
   }
 }
 .menu-toggle {
@@ -53,5 +63,19 @@
   &:focus {
     fill: $colorAccent;
     cursor: pointer;
+  }
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.logo {
+  @include fontFormats(1.17, 24px);
+  font-family: 'Raleway';
+  font-weight: 700;
+  color: $logoColor;
+  &--color-accent {
+    color: $colorAccent;
   }
 }
