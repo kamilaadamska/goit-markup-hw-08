@@ -51,6 +51,18 @@
       max-width: 354px;
       min-height: 536px;
     }
+    &__card-figcaption {
+      @include paddings(30px, 30px);
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .team-list {
+    &__item {
+      display: block;
+      max-width: 270px;
+      min-height: 428px;
+    }
   }
 }
 .social-media {
@@ -64,5 +76,18 @@
     @extend %flexbox;
     @include size(44px, 44px);
     border-radius: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .social-media {
+    &__icon {
+      transition: background-color $transitionForm, color $transitionForm;
+      &:hover,
+      &:focus {
+        background-color: $colorAccent;
+        color: $baseColor;
+        cursor: pointer;
+      }
+    }
   }
 }
