@@ -1,0 +1,53 @@
+.projects-gallery {
+  @extend .about-us-gallery;
+  &--flex-wrap {
+    flex-wrap: wrap;
+  }
+  &__card {
+    flex-basis: calc((100% - 60px) / 3);
+    transition: box-shadow $transitionForm;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+    }
+  }
+  &__card-img {
+    display: block;
+  }
+  &__card-figcaption {
+    padding: 20px 24px;
+    border: 1px solid $projectsGalleryColor;
+  }
+  &__card-item {
+    position: relative;
+    overflow: hidden;
+  }
+  &__card-item-overlay {
+    @extend %flexbox;
+    @include positions(0, 0);
+    @include size(100%, 100%);
+    padding-left: 24px;
+    padding-right: 45px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+    transition: transform $transitionForm;
+  }
+  &__card-item-description {
+    @include fontFormats(1.6, 18px);
+    color: $baseColor;
+  }
+  &__card-header {
+    @include fontFormats(2, 18px, 0.06em);
+    margin-bottom: 4px;
+  }
+  &__card-span {
+    @include fontFormats(1.88, 16px);
+    color: $secondaryFontColor;
+  }
+}
+.projects-gallery__card:hover .projects-gallery__card-item-overlay,
+.projects-gallery__card:focus .projects-gallery__card-item-overlay {
+  transform: translateY(0);
+}
