@@ -24,17 +24,26 @@
     <header class="header__border">
       <div class="container header">
         <div class="main-nav">
-          <a class="link logo" href="index.html"
-            ><span class="logo logo--color-accent">Web</span>Studio</a
-          >
+          <div class="main-nav__mobile">
+            <a class="link logo" href="index.html"
+              ><span class="logo--color-accent">Web</span>Studio</a
+            >
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg width="24px" height="24px">
+                <use href="images/icons.svg#icon-menu_24px"></use>
+              </svg>
+            </button>
+          </div>
           <nav>
             <ul class="main-nav__list">
-              <li><a class="link link--selected" href="index.html">Agencja</a></li>
               <li>
-                <a class="link link--selected main-nav__list--link-is-active" href="portfolio.html"
-                  >Portfolio</a
-                >
+                <a class="link link--selected main-nav__list--link-is-active" href="#">Agencja</a>
               </li>
+              <li><a class="link link--selected" href="portfolio.html">Portfolio</a></li>
               <li><a class="link link--selected" href="#contact">Kontakt</a></li>
             </ul>
           </nav>
@@ -45,14 +54,14 @@
               <a
                 class="link link--selected header__contact-details"
                 href="mailto:info@devstudio.com"
-                ><svg class="header__contact-details--icon-margin" width="16px" height="12px">
+                ><svg class="header__mail-icon" width="16px" height="12px">
                   <use href="images/icons.svg#icon-envelope"></use></svg
                 >info@devstudio.com</a
               >
             </li>
             <li>
               <a class="link link--selected header__contact-details" href="tel:+48111111111"
-                ><svg class="header__contact-details--icon-margin" width="10px" height="16px">
+                ><svg class="header__phone-icon" width="10px" height="16px">
                   <use href="images/icons.svg#icon-smartphone"></use></svg
                 >+48 111 111 111</a
               >
@@ -292,11 +301,53 @@
         </div>
       </section>
     </main>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="18.67px" height="18.67px">
+          <use href="images/icons.svg#closing-icon-1"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__list mobile-menu__list--gap">
+          <li>
+            <a href="#contact" class="link link--selected">Agencja</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="link link--selected">Portfolio</a>
+          </li>
+          <li>
+            <a href="index.html" class="link link--selected">Kontakt</a>
+          </li>
+        </ul>
+        <div>
+          <ul class="mobile-menu__list">
+            <li>
+              <a class="link mobile-menu__phone" href="tel:+48111111111">+48 111 111 111</a>
+            </li>
+            <li>
+              <a class="link link--selected mobile-menu__mail" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__sm-list">
+            <li><a class="link mobile-menu__sm-link" href="#">Instagram</a></li>
+            <li><a class="link mobile-menu__sm-link" href="#">Twitter</a></li>
+            <li><a class="link mobile-menu__sm-link" href="#">Facebook</a></li>
+            <li>
+              <a class="link mobile-menu__sm-link mobile-menu__sm-link--not-bordered" href="#"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <footer class="footer-bg-color">
       <div class="container footer">
-        <div>
+        <div class="footer__container">
           <a class="link logo footer__logo" href="index.html"
-            ><span class="logo logo--color-accent">Web</span>Studio</a
+            ><span class="logo--color-accent">Web</span>Studio</a
           >
           <address id="contact">
             <ul class="address-list">
@@ -310,7 +361,7 @@
               </li>
               <li>
                 <a
-                  class="address-list__link address-list__link--color"
+                  class="link address-list__link address-list__link--color"
                   href="mailto:info@example.com"
                   >info@example.com</a
                 >
@@ -371,5 +422,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
