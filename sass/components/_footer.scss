@@ -45,6 +45,18 @@
     gap: 12px;
   }
 }
+@media (min-width: 768px) {
+  .footer {
+    padding-right: 89px;
+    padding-left: 76px;
+    &__container {
+      margin-right: 84px;
+    }
+    &__logo {
+      margin-right: 0;
+    }
+  }
+}
 .address-list {
   list-style-type: none;
   @extend %flexbox;
@@ -67,6 +79,13 @@
   &__icon {
     &--footer-color {
       background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .social-media {
+    &__footer {
+      margin-bottom: 42px;
     }
   }
 }
